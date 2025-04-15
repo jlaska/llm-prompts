@@ -1,0 +1,12 @@
+providers:
+  - id: openai:gpt-4
+    # optional: set API key via env var OPENAI_API_KEY
+    provider: openai
+
+#  - id: litellm:gpt-3.5-turbo
+#    config:
+#      apiBaseUrl: https://litellm.keener.us
+#      apiKey: your-api-key # Optional
+
+tests:
+  - path: tests/summarization.test.yaml

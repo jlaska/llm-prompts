@@ -1,0 +1,11 @@
+repos:
+  - repo: local
+    hooks:
+      - id: promptfoo-check
+        name: Run promptfoo eval
+        entry: bash -c 'promptfoo eval'
+        language: system
+        pass_filenames: false
+        always_run: true
+        verbose: true
+        stages: [pre-commit]
