@@ -1,0 +1,13 @@
+# promptfoo configuration file
+defaultTest:
+  model: openai:gpt-4
+  prompt: prompts/summarization.md
+
+tests:
+  - name: Summarize a short tech article
+    vars:
+      input_text: >
+        Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications...
+    assert:
+      - contains: "Kubernetes"
+      - word_count_under: 100
