@@ -1,7 +1,6 @@
 providers:
-  - id: openai:gpt-4
+  - id: openai:gpt-4o
     # optional: set API key via env var OPENAI_API_KEY
-    provider: openai
 
 #  - id: litellm:gpt-3.5-turbo
 #    config:
