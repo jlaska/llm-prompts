@@ -1,6 +1,6 @@
 providers:
-  - id: openai:gpt-4o
     # optional: set API key via env var OPENAI_API_KEY
+  - id: openai:gpt-4
 
 #  - id: litellm:gpt-3.5-turbo
 #    config:
@@ -8,4 +8,12 @@ providers:
 #      apiKey: your-api-key # Optional
 
 tests:
-  - path: tests/summarization.test.yaml
+  - description: Summarization test
+    prompt: prompts/summarization.md
+    vars:
+      input_text: >
+        Kubernetes is a system for automating deployment, scaling, and operations of application containers across clusters of hosts.
+    assert:
+      - contains: "Kubernetes"
+      - word_count_under: 100
+    model: openai:gpt-4
