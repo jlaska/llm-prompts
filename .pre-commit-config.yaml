@@ -3,8 +3,8 @@ repos:
     hooks:
       - id: promptfoo-check
         name: Run promptfoo eval
-        # entry: bash -c 'promptfoo eval'
-        entry: bash -c 'set -a && source .env && set +a && promptfoo eval'
+        entry: bash -c 'promptfoo eval'
+        # entry: bash -c 'set -a && source .env && set +a && promptfoo eval'
         language: system
         pass_filenames: false
         always_run: true
